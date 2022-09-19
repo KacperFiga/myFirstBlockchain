@@ -26,6 +26,25 @@
 			{
 				"inputs": [
 					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "nameToFavNumber",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
@@ -120,11 +139,11 @@
 	},
 	"sources": {
 		"contracts/SimpleStorage.sol": {
-			"keccak256": "0x921cbafc57b58f4f2ec5768089a2ee091d188a8f59d48b2cb36c8c13e255a0a1",
+			"keccak256": "0x0e295417cdda41ef6ed16ddfbf5d93818f80ed03102d649192f16a6eea5e365d",
 			"license": "UNLICENSED",
 			"urls": [
-				"bzz-raw://f2051bb779eaca29d919cf0bfd92ce9c91fa1a249016ddc70701c2643e8c4fe4",
-				"dweb:/ipfs/QmUS2JGpWCCfT4Y28ePEYNT9UKD8EEWSnDLHfSUQCSwMxz"
+				"bzz-raw://8e7474c79da90478af503b94b64d052deccba6c785fca5c25969f8e680e11c31",
+				"dweb:/ipfs/QmWGP7pnn2KnP85J2BBKHHHxp5Khm1t4AV3i3uNwdpAKMc"
 			]
 		}
 	},

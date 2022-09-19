@@ -9,6 +9,8 @@ contract SimpleStorage {
         string name;
     }
 
+    mapping(string => uint256) public nameToFavNumber;
+
     People public person = People({favoriteNumber: 47, name: "Kacper"});
 
     People[] public people;
@@ -28,5 +30,7 @@ contract SimpleStorage {
         });
 
         people.push(newPerson);
+
+        nameToFavNumber[_name] = _favoriteNumber;
     }
 }
