@@ -7,7 +7,25 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "favoriteNumber",
+				"name": "person",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "favoriteNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "retrive",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -60,11 +78,11 @@
 	},
 	"sources": {
 		"contracts/SimpleStorage.sol": {
-			"keccak256": "0x56e42680146eba60c37096d09011bceb0ca579b6043595b82f2ea6b6dcb9515a",
+			"keccak256": "0x437b25e8c26320007ae7e40385c3059eae791de2eb1ddd109f677781eb035959",
 			"license": "UNLICENSED",
 			"urls": [
-				"bzz-raw://39550d3b364c6013451c4e960b0de69e0d60bffed0f9384fe3f0b222e76163ac",
-				"dweb:/ipfs/QmcuvyZpxMvxPjBuGRDPNY7nKNJ57a5qPN4VQFkhcjHtZC"
+				"bzz-raw://2266413abef742d6eeed83c3cbdc891807cef8c266cee7082b6edaca6439afd0",
+				"dweb:/ipfs/QmQy99aYVh6FeEwGEJ6BBhj2oSNg4mxe2oMgU9n4dswya9"
 			]
 		}
 	},
