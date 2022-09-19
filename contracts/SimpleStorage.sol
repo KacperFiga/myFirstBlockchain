@@ -15,6 +15,10 @@ contract SimpleStorage {
 
     People[] public people;
 
+    function store(uint256 _favoriteNumber) public{
+        favoriteNumber = _favoriteNumber;
+    }
+
     function setFavoriteNumber(uint256 _favoriteNumber) public {
         favoriteNumber = _favoriteNumber;
     }
@@ -33,4 +37,5 @@ contract SimpleStorage {
 
         nameToFavNumber[_name] = _favoriteNumber;
     }
+
 }
