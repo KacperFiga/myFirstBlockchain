@@ -6,6 +6,48 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_favoriteNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "addPerson",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "people",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "favoriteNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "person",
 				"outputs": [
@@ -78,11 +120,11 @@
 	},
 	"sources": {
 		"contracts/SimpleStorage.sol": {
-			"keccak256": "0x437b25e8c26320007ae7e40385c3059eae791de2eb1ddd109f677781eb035959",
+			"keccak256": "0x921cbafc57b58f4f2ec5768089a2ee091d188a8f59d48b2cb36c8c13e255a0a1",
 			"license": "UNLICENSED",
 			"urls": [
-				"bzz-raw://2266413abef742d6eeed83c3cbdc891807cef8c266cee7082b6edaca6439afd0",
-				"dweb:/ipfs/QmQy99aYVh6FeEwGEJ6BBhj2oSNg4mxe2oMgU9n4dswya9"
+				"bzz-raw://f2051bb779eaca29d919cf0bfd92ce9c91fa1a249016ddc70701c2643e8c4fe4",
+				"dweb:/ipfs/QmUS2JGpWCCfT4Y28ePEYNT9UKD8EEWSnDLHfSUQCSwMxz"
 			]
 		}
 	},
