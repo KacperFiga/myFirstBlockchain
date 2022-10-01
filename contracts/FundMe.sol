@@ -3,8 +3,10 @@ pragma solidity ^0.8.6;
  
 contract FundMe{
 
+    uint256 minimumUSD = 50;
+
     function fund() public payable{
-         require(msg.value > 1e18, "Didn't send enough!");
+         require(msg.value > minimumUSD, "Didn't send enough!");
     }
 
 }
