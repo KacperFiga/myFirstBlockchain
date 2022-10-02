@@ -6,6 +6,12 @@ import "./PriceConventer.sol";
 contract FundMe {
     using PriceConventer for uint256;
 
+    address public owner;
+
+    constructor() {
+        owner = msg.sender;
+    }
+
     uint256 minimumUSD = 50 * 1e18;
     address[] public funders;
     mapping(address => uint256) public addressToAmmountFunded;
@@ -19,9 +25,9 @@ contract FundMe {
         addressToAmmountFunded[msg.sender] = msg.value;
     }
 
-    function withdraw() public {
+    function withdraw() public onlyOwner {
         for (
-            uint256 funderIndex = 0;
+            uint256 funderIndex = 0 ;
             funderIndex < funders.length;
             funderIndex++
         ) {
@@ -41,5 +47,10 @@ contract FundMe {
             value: address(this).balance
         }("");
         require(callSuccess, "send failed");
+    }
+
+    modifier onlyOwner() {
+        require(owner == msg.sender, "You can withdraw only your deposit!");
+        _;
     }
 }
