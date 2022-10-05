@@ -1,6 +1,9 @@
 {
   "dependencies": {
     "@chainlink/contracts": "^0.5.1",
-    "solc": "^0.8.17"
+    "solc": "^0.8.6"
+  },
+  "scripts": {
+    "compile": "solcjs --bin --abi --inclued-path node_module/  --base-path . -o . contracts/SimpleStorage.sol"
   }
 }
