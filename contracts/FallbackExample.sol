@@ -2,14 +2,14 @@
 
 pragma solidity ^0.8.6;
 
-contract FallbackExample{
+contract FallbackExample {
     uint256 public result;
 
-    receive() external payable{
+    receive() external payable {
         result = 1;
     }
 
-    fallback() external payable{
+    fallback() external payable {
         result = 2;
     }
 }

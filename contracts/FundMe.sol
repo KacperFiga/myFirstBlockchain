@@ -27,7 +27,7 @@ contract FundMe {
 
     function withdraw() public onlyOwner {
         for (
-            uint256 funderIndex = 0 ;
+            uint256 funderIndex = 0;
             funderIndex < funders.length;
             funderIndex++
         ) {
@@ -54,13 +54,11 @@ contract FundMe {
         _;
     }
 
-
-    receive() external payable{
+    receive() external payable {
         fund();
     }
 
-    fallback() external payable{
+    fallback() external payable {
         fund();
     }
-
 }
