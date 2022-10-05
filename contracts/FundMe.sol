@@ -6,19 +6,19 @@ import "./PriceConventer.sol";
 contract FundMe {
     using PriceConventer for uint256;
 
-    address public owner;
+    address public immutable i_owner;
 
     constructor() {
-        owner = msg.sender;
+        i_owner = msg.sender;
     }
 
-    uint256 minimumUSD = 50 * 1e18;
+    uint256 public constant MINIMUM_USD = 50 * 1e18;
     address[] public funders;
     mapping(address => uint256) public addressToAmmountFunded;
 
     function fund() public payable {
         require(
-            msg.value.getConversionRate() > minimumUSD,
+            msg.value.getConversionRate() > MINIMUM_USD,
             "Didn't send enough!"
         );
         funders.push(msg.sender);
@@ -44,13 +44,13 @@ contract FundMe {
         // require(sendSuccess, "send failed");
         //3th way - call
         (bool callSuccess, ) = payable(msg.sender).call{
-            value: address(this).balance
+            value: addre ss(this).balance
         }("");
         require(callSuccess, "send failed");
     }
 
     modifier onlyOwner() {
-        require(owner == msg.sender, "You can withdraw only your deposit!");
+        require(i_owner == msg.sender, "You can withdraw only your deposit!");
         _;
     }
 }
