@@ -44,7 +44,7 @@ contract FundMe {
         // require(sendSuccess, "send failed");
         //3th way - call
         (bool callSuccess, ) = payable(msg.sender).call{
-            value: addre ss(this).balance
+            value: address(this).balance
         }("");
         require(callSuccess, "send failed");
     }
@@ -53,4 +53,14 @@ contract FundMe {
         require(i_owner == msg.sender, "You can withdraw only your deposit!");
         _;
     }
+
+
+    receive() external payable{
+        fund();
+    }
+
+    fallback() external payable{
+        fund();
+    }
+
 }
